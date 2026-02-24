@@ -1,5 +1,12 @@
 server:
   port: 8080
 spring:
-  application:
-    name: JavaLearningDemo
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/pconf001db
+    username: postgres
+    password: leilei
+mybatis:
+  mapper-locations: classpath:mapper/*.xml  # 包扫描路径
+  configuration:
+    map-underscore-to-camel-case: true  # 映射数据库字段名和Java字段名时自动转换驼峰命名
